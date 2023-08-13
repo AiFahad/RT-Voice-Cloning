@@ -20,7 +20,7 @@ pip install elevenlabs
 
 
 ```py
-from elevenlabs import generate, play
+from elevenlabs import generate, play, save
 
 audio = generate(
   text="Hi! My name is Bella, nice to meet you!",
@@ -28,7 +28,10 @@ audio = generate(
   model="eleven_monolingual_v1"
 )
 
-play(audio)
+play(audio, notebook=True)
+audio_name = 'clone.wav'
+
+save(audio, audio_name)
 ```
 
 <details> <summary> Play </summary>
